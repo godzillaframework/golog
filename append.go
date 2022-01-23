@@ -1,15 +1,16 @@
 package golog
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Appender interface {
-	Append(log log)
-
+	Append(log Log)
 	Id() string
 }
 
 type Stdout struct {
-	dateFormat string
+	DateFormat string
 }
 
 var (
@@ -29,13 +30,14 @@ func (s *Stdout) Append(log Log) {
 }
 
 func (s *Stdout) Id() string {
-	return "Id"
+	return "github.com/ivpusic/golog/stdout"
 }
 
 func stdoutAppender() *Stdout {
-	if instance != nil {
+	if instance == nil {
+
 		instance = &Stdout{
-			dateFormat: "11:11:11",
+			DateFormat: "11:11:11",
 		}
 	}
 
