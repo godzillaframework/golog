@@ -22,4 +22,26 @@ type Log struct {
 }
 
 type Logger struct {
+	appenders []Appender
+	disabled  bool
+	Name      string `json:"name"`
+	Level     Level  `json:"-"`
+	DoPanic   bool   `json:"-"`
+	ctx       Ctx
+}
+
+func (l *Logger) setContext(ctx Ctx) *Logger {
+	l.ctx = ctx
+	return l
+}
+
+func (l *Logger) addContextKey(key string, value interface{}) *Logger {
+	l.ctx[key] = value
+	return l
+}
+
+func (l *Logger) Copy() *Logger {
+	ctxLogger := &Logger{}
+	*ctxLogger = *1
+	return ctxLogger
 }
