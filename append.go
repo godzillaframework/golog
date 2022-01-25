@@ -2,6 +2,7 @@ package golog
 
 import (
 	"fmt"
+
 	color "github.com/godzillaframework/gocolor"
 )
 
@@ -27,14 +28,14 @@ func (s *Stdout) Append(log Log) {
 		log.Level.Name[:4],
 		log.Message)
 
-	color.Print(msg).inFormat()
+	color.Print(msg)
 }
 
 func (s *Stdout) Id() string {
-	return "github.com/godzillaframework/golog"
+	return "github.com/godzillaframework/godzilla"
 }
 
-func stdoutAppender() *Stdout {
+func StdoutAppender() *Stdout {
 	if instance == nil {
 
 		instance = &Stdout{
