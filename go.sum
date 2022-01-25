@@ -1,0 +1,4 @@
+github.com/godzillaframework/gocolor v0.0.0-20220124035246-b55cfd90767d h1:17AayAA8/wQkwDLaVBsGpsi0VpAC58NCA1hWVoqlFWs=
+github.com/godzillaframework/gocolor v0.0.0-20220124035246-b55cfd90767d/go.mod h1:TYlDVgwvHjHab3eL/Ig4jmobI83tAjNqlIoSUgZHLLs=
+github.com/shiena/ansicolor v0.0.0-20200904210342-c7312218db18 h1:DAYUYH5869yV94zvCES9F51oYtN5oGlwjxJJz7ZCnik=
+github.com/shiena/ansicolor v0.0.0-20200904210342-c7312218db18/go.mod h1:nkxAfR/5quYxwPZhyDxgasBMnRtBZd0FCEpawpjMUFg=
