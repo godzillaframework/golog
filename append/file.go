@@ -2,8 +2,9 @@ package append
 
 import (
 	"fmt"
-	"github.com/godzillaframework/golog"
 	"os"
+
+	"github.com/godzillaframework/golog"
 )
 
 type fileAppender struct {
